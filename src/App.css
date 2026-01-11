@@ -1,0 +1,168 @@
+:root {
+  --primary-color: #646cff;
+  /* Vite default purpleish */
+  --bg-color: #242424;
+  --text-color: rgba(255, 255, 255, 0.87);
+  --card-bg: #1a1a1a;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  width: 100%;
+}
+
+.container {
+  width: 100%;
+  max-width: 800px;
+  /* Reasonable max width */
+  margin: 0 auto;
+}
+
+header {
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #444;
+  padding-bottom: 1rem;
+  flex-wrap: wrap;
+  /* Allow wrapping */
+  gap: 1rem;
+}
+
+h1 {
+  font-size: 2em;
+  line-height: 1.1;
+}
+
+.card {
+  padding: 2em;
+  background-color: var(--card-bg);
+  border-radius: 8px;
+  margin-bottom: 1em;
+  text-align: left;
+}
+
+.form-group {
+  margin-bottom: 1em;
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 0.5em;
+  font-weight: bold;
+}
+
+input,
+select {
+  padding: 0.6em;
+  font-size: 1em;
+  border-radius: 4px;
+  border: 1px solid #444;
+  background-color: #333;
+  color: white;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: var(--primary-color);
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+
+button:hover {
+  border-color: #646cff;
+}
+
+button.secondary {
+  background-color: transparent;
+  border: 1px solid #666;
+  margin-left: 10px;
+}
+
+.message {
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #333;
+  border-radius: 4px;
+}
+
+.user-info span {
+  margin-right: 15px;
+}
+
+.logout-btn {
+  padding: 0.4em 0.8em;
+  font-size: 0.8em;
+  background-color: #444;
+}
+
+details summary {
+  cursor: pointer;
+  padding: 10px;
+  background: #333;
+  border-radius: 4px;
+}
+
+/* Mobile adjustments */
+@media (max-width: 600px) {
+  #root {
+    padding: 1rem;
+  }
+
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .user-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .user-info span {
+    margin-right: 0;
+  }
+
+  .card {
+    padding: 1.5rem;
+  }
+
+  .form-group input,
+  .form-group select {
+    font-size: 16px;
+    /* Stop iOS zoom */
+  }
+
+  button.secondary {
+    margin-left: 0;
+    margin-top: 10px;
+    width: 100%;
+  }
+
+  /* Make buttons full width on mobile for better touch targets */
+  .actions {
+    flex-direction: column;
+  }
+}
